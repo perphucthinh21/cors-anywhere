@@ -6,7 +6,7 @@ const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 8080;
 
 corsProxy.createServer({
-    originWhitelist: ['http://localhost:3000', 'https://portfolio-ravenous.herokuapp.com', 'http://18.191.112.47', 'http://spm.cnexco.com', ''],
+    originWhitelist: ['http://localhost:3000', 'https://portfolio-ravenous.herokuapp.com', 'http://18.191.112.47', 'http://spm.cnexco.com', 'https://spm.cnexco.com', ''],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, () => {
     console.log('Running CORS Anywhere on ' + host + ':' + port);
